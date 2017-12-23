@@ -1,0 +1,29 @@
+.status-bar {
+  background: fade-out(white, .15);
+  width: 100%;
+  height: 60px;
+}
+
+.status-bar__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  padding: $s-size 0;
+}
+
+.status-bar__text {
+  display: inline-flex;
+  padding: $sm-size;
+  @media (max-width: $desktop-breakpoint - .01rem) {
+    font-size: 1.3rem;
+  }
+}
+
+.status-bar__default-msg {
+  display: inline-flex;
+  font-size: $font-size-large;
+}
+
+.status-bar__status {
+  text-align: center;
+}

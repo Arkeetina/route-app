@@ -1,7 +1,5 @@
 .box-layout {
   align-items: center;
-  background: url('/images/bg.jpg');
-  background-size: cover;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -14,9 +12,12 @@
   padding: $l-size $m-size;
   text-align: center;
   width: 50rem;
+  @media (max-width: $desktop-breakpoint - .01rem) {
+    width: 35rem;
+  }
 }
 
-.box-layout__title {
-  margin: 0 0 $m-size 0;
-  line-height: 1;
+.box-container {
+  background: url('/images/bg.jpg');
+  background-size: cover;
 }

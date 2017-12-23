@@ -23,15 +23,17 @@ export const setError = error => ({
   error,
 });
 
-export const startSetRoute = (startOffLocation, dropOffLocation) => {
+export const startSetRoute = (locations) => {
   return (dispatch) => {
-    return axios.post(`${ROOT_URL}/route`, startOffLocation, dropOffLocation)
+    return axios.post(`${ROOT_URL}/route`, locations)
       .then((response) => {
         return response;
       })
+      .catch((error) => {
+        dispatch(setError(error));
+      })
       .then(({ data }) => {
         const { token } = data;
-
         axios.get(`${ROOT_URL}/route/${token}`)
           .then((res) => {
             if (res.data.status === 'success') {
@@ -45,9 +47,6 @@ export const startSetRoute = (startOffLocation, dropOffLocation) => {
           .catch((error) => {
             dispatch(setError(error));
           });
-      })
-      .catch((error) => {
-        dispatch(setError(error));
       });
   };
 };

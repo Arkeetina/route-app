@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render StatusBar correctly 1`] = `
+<div
+  className="status-bar status-bar__content"
+  key="ad466a89-172a-4e4c-b335-0b4704c50af8"
+>
+  <CSSTransitionGroup
+    transitionAppear={true}
+    transitionAppearTimeout={1000}
+    transitionEnter={true}
+    transitionEnterTimeout={500}
+    transitionLeave={true}
+    transitionLeaveTimeout={1000}
+    transitionName="anim"
+  />
+</div>
+`;

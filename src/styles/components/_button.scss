@@ -10,10 +10,23 @@
   text-decoration: none;
 }
 
-.button--link {
-  background: none;
+.button:hover {
+  background: $dark-blue;
+  transition: all 0.5s
 }
 
-.button--secondary {
+.button:active {
+  background: $dark-blue;
+  opacity: 0;
+  transition: all 0.5s
+}
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.button:disabled {
   background: #888;
 }

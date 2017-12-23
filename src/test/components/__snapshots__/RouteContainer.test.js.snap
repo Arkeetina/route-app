@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render RouteContainer correctly 1`] = `
+<div
+  className="box-container"
+>
+  <StatusBar />
+  <div
+    className="box-layout"
+  >
+    <div
+      className="box-layout__box"
+    >
+      <LocationForm
+        onSubmit={[Function]}
+      />
+      <withGoogleMap(Map)
+        containerElement={
+          <div
+            style={
+              Object {
+                "height": "400px",
+              }
+            }
+          />
+        }
+        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKpzSptr4Y7IikRh3vEaGtrFFB8IfQDg8"
+        mapElement={
+          <div
+            style={
+              Object {
+                "height": "100%",
+              }
+            }
+          />
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

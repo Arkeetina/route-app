@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should correctly render LocationForm 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <input
+    className="text-input"
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder="Enter start off location"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder="Enter drop off location"
+    type="text"
+    value=""
+  />
+  <button
+    className="button"
+    disabled={true}
+    type="submit"
+  >
+    Send Location
+  </button>
+</form>
+`;
