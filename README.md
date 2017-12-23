@@ -1,6 +1,6 @@
 # route-app
 
-React/Redux app for dispalying a route on Google map 
+React/Redux app for displaying a route on Google map 
 
 ## Installing
 
