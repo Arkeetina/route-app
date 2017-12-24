@@ -27,3 +27,16 @@ With NPM
 ```
 npm run dev-server
 ```
+
+## Tests 
+
+
+With Yarn
+```
+yarn test
+```
+
+With NPM
+```
+npm test
+```
