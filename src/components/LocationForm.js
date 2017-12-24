@@ -12,13 +12,13 @@ export default class LocationForm extends Component {
     }
   }
 
-  //sets start off locations state
+  //sets start off location state
   onStartOffLocationChange = event => {
     const startOffLocation = event.target.value;
     this.setState(() => ({ startOffLocation }));
   }
 
-  //sets drop off locations state
+  //sets drop off location state
   onDropOffLocationChange = event => {
     const dropOffLocation = event.target.value;
     this.setState(() => ({ dropOffLocation }));
