@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-
+// ROOT_URL value is stored here for the development only
 const ROOT_URL = 'http://localhost:3000';
 
 export const setRouteSuccess = res => ({
@@ -26,6 +26,7 @@ export const setError = error => ({
 export const startSetRoute = (locations) => {
   return (dispatch) => {
     return axios.post(`${ROOT_URL}/route`, locations)
+      // POST request to submit locations to server
       .then((response) => {
         return response;
       })
@@ -34,6 +35,7 @@ export const startSetRoute = (locations) => {
       })
       .then(({ data }) => {
         const { token } = data;
+        // GET request to fetch locations coordinates
         axios.get(`${ROOT_URL}/route/${token}`)
           .then((res) => {
             if (res.data.status === 'success') {

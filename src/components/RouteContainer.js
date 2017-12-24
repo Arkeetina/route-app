@@ -21,6 +21,7 @@ export class RouteContainer extends Component {
       serverError,
       totalDistance,
       totalTime,
+      networkError,
     } = this.props;
 
     return (
@@ -32,6 +33,7 @@ export class RouteContainer extends Component {
           serverError={serverError}
           totalTime={totalTime}
           totalDistance={totalDistance}
+          networkError={networkError}
         />
         <div className="box-layout">
           <div className="box-layout__box">

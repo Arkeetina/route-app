@@ -14,6 +14,7 @@ class Map extends Component {
   }
 
   componentWillReceiveProps({ path }) {
+    // path is passed as a prop from the parent component
     if (path) {
       const DirectionsService = new google.maps.DirectionsService();
 

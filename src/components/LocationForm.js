@@ -4,23 +4,27 @@ export default class LocationForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startOffLocation: '',
-      dropOffLocation: '',
+      // drop and start off locations props check is set up for the tests
+      startOffLocation: props.locations ? props.locations.startOffLocation : '',
+      dropOffLocation: props.locations ? props.locations.dropOffLocation : '',
       error: '',
       disabled: true,
     }
   }
 
+  //sets start off locations state
   onStartOffLocationChange = event => {
     const startOffLocation = event.target.value;
     this.setState(() => ({ startOffLocation }));
   }
 
+  //sets drop off locations state
   onDropOffLocationChange = event => {
     const dropOffLocation = event.target.value;
     this.setState(() => ({ dropOffLocation }));
   }
 
+  //submits form with start off and drop off locations
   onSubmit = event => {
     event.preventDefault();
     if (!this.state.startOffLocation.trim() || !this.state.dropOffLocation.trim()) {
@@ -37,6 +41,7 @@ export default class LocationForm extends Component {
     }
   }
 
+  // enables Send Location button on focus
   onFocus = () => {
     this.setState(() => ({ disabled: false }));
   }

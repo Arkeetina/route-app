@@ -3,7 +3,7 @@
 exports[`should render StatusBar correctly 1`] = `
 <div
   className="status-bar status-bar__content"
-  key="ad466a89-172a-4e4c-b335-0b4704c50af8"
+  key="edf9fb9d-0049-4d52-9de2-006fc6c75f2a"
 >
   <CSSTransitionGroup
     transitionAppear={true}
