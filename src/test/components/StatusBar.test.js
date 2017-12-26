@@ -6,8 +6,6 @@ test('should render StatusBar correctly', () => {
   const wrapper = shallow(<StatusBar />);
   expect(wrapper).toMatchSnapshot();
 });
-<<<<<<< HEAD
-=======
 
 test('should render StatusBar with default message correctly', () => {
   const defautMsg = 'default message';
@@ -44,4 +42,3 @@ test('should render StatusBar with total distance correctly', () => {
   const wrapper = shallow(<StatusBar totalDistance={totalDistance} />);
   expect(wrapper).toMatchSnapshot();
 });
->>>>>>> dev1

@@ -3,6 +3,7 @@
 exports[`should render StatusBar correctly 1`] = `
 <div
   className="status-bar status-bar__content"
+  key="c4ec1a1a-5d78-45b0-8177-c0bf644e331e"
 >
   <CSSTransitionGroup
     transitionAppear={true}
@@ -19,6 +20,7 @@ exports[`should render StatusBar correctly 1`] = `
 exports[`should render StatusBar with default message correctly 1`] = `
 <div
   className="status-bar status-bar__content"
+  key="3b974b93-67af-4c6e-a1f2-64b4527f75f5"
 >
   <CSSTransitionGroup
     transitionAppear={true}
@@ -31,7 +33,7 @@ exports[`should render StatusBar with default message correctly 1`] = `
   >
     <p
       className="status-bar__default-msg"
-      key="ec91e82d-7ff2-4223-9f64-c249af3a7964"
+      key="6e411651-2d51-4f9b-9d09-ced8e8eebb0f"
     >
       default message
     </p>
@@ -42,6 +44,7 @@ exports[`should render StatusBar with default message correctly 1`] = `
 exports[`should render StatusBar with route fail status correctly 1`] = `
 <div
   className="status-bar status-bar__content"
+  key="8ca8f0aa-0943-4331-882f-f4acb70834c3"
 >
   <CSSTransitionGroup
     transitionAppear={true}
@@ -54,7 +57,7 @@ exports[`should render StatusBar with route fail status correctly 1`] = `
   >
     <p
       className="status-bar__text"
-      key="b4fc0e36-a042-4055-aa4f-04cca227fd66"
+      key="c2238f75-fe9c-406e-9948-c7af9b6b564c"
     >
       route fail
       . Please choose another destination
@@ -66,6 +69,7 @@ exports[`should render StatusBar with route fail status correctly 1`] = `
 exports[`should render StatusBar with route in progress status correctly 1`] = `
 <div
   className="status-bar status-bar__content"
+  key="09d64de3-6462-4ce2-a3d7-9ab3c772a959"
 >
   <CSSTransitionGroup
     transitionAppear={true}
@@ -78,7 +82,7 @@ exports[`should render StatusBar with route in progress status correctly 1`] = `
   >
     <p
       className="status-bar__text"
-      key="b3ec9dce-48fa-4ce5-ad8c-43dd264dc0d3"
+      key="1d6a0b3e-2d9d-46fd-975a-3814fa0069f4"
     >
       in progress
     </p>
@@ -89,6 +93,7 @@ exports[`should render StatusBar with route in progress status correctly 1`] = `
 exports[`should render StatusBar with server error correctly 1`] = `
 <div
   className="status-bar status-bar__content"
+  key="55ee700e-4421-44b9-b91c-b0d3040a6266"
 >
   <CSSTransitionGroup
     transitionAppear={true}
@@ -101,7 +106,7 @@ exports[`should render StatusBar with server error correctly 1`] = `
   >
     <p
       className="status-bar__text"
-      key="1a3b021d-4f9b-4e50-9f59-73fbac213894"
+      key="5fe390a1-8306-43e4-8023-216cb61c58bd"
     >
       There was a connection error, please try again
     </p>
@@ -112,6 +117,7 @@ exports[`should render StatusBar with server error correctly 1`] = `
 exports[`should render StatusBar with total distance correctly 1`] = `
 <div
   className="status-bar status-bar__content"
+  key="d42b12bf-c1f7-4889-88cd-1e86caf4bdf1"
 >
   <CSSTransitionGroup
     transitionAppear={true}
@@ -124,7 +130,7 @@ exports[`should render StatusBar with total distance correctly 1`] = `
   >
     <p
       className="status-bar__text"
-      key="7558a00d-d5ea-4d93-a10f-fb1aa3772d7c"
+      key="7f9537a6-cdd0-470b-9138-4b36217d19b3"
     >
       Total distance 
       10
@@ -137,6 +143,7 @@ exports[`should render StatusBar with total distance correctly 1`] = `
 exports[`should render StatusBar with total time correctly 1`] = `
 <div
   className="status-bar status-bar__content"
+  key="4c9c016e-bc0e-4516-b835-ec83962e35f7"
 >
   <CSSTransitionGroup
     transitionAppear={true}
@@ -149,7 +156,7 @@ exports[`should render StatusBar with total time correctly 1`] = `
   >
     <p
       className="status-bar__text"
-      key="de413ad6-373c-4f8a-91d7-8d5d0f29c9ae"
+      key="c4da9354-a458-4358-ba80-1b7cb78cb632"
     >
       Travel time 
       150
