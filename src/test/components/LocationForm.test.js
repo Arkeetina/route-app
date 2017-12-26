@@ -9,8 +9,8 @@ test('should correctly render LocationForm', () => {
 });
 
 test('should render error for invalid form submission', () => {
-  expect(wrapper).toMatchSnapshot();
   const wrapper = shallow(<LocationForm />);
+  expect(wrapper).toMatchSnapshot();
   wrapper.find('form').simulate('submit', {
     preventDefault: () => {},
   });
@@ -19,7 +19,7 @@ test('should render error for invalid form submission', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-test('should set start off location on input change', () => {
+test('should set start off state location on input change', () => {
   const value = 'Some destionation';
   const wrapper = shallow(<LocationForm />);
   wrapper.find('input').at(0).simulate('change', {
@@ -28,7 +28,7 @@ test('should set start off location on input change', () => {
   expect(wrapper.state('startOffLocation')).toBe(value);
 });
 
-test('should set drop off location on input change', () => {
+test('should set drop off state location on input change', () => {
   const value = 'Some destionation';
   const wrapper = shallow(<LocationForm />);
   wrapper.find('input').at(1).simulate('change', {
@@ -50,7 +50,7 @@ test('should call onSubmit form on valid form submision', () => {
   expect(onSubmitSpy).toHaveBeenLastCalledWith(locations[0]);
 });
 
-test('should set disabled to false on input focuse', () => {
+test('should set disabled to false on input focus', () => {
   const wrapper = shallow(<LocationForm />);
   wrapper.find('input').at(0).simulate('focus');
   wrapper.find('input').at(1).simulate('focus');

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Map correctly 1`] = `
+<div
+  style={
+    Object {
+      "height": "400px",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "height": "100%",
+      }
+    }
+  />
+  <div />
+</div>
+`;
+
+exports[`should render Map with path coordinates correctly 1`] = `
+<div
+  style={
+    Object {
+      "height": "400px",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "height": "100%",
+      }
+    }
+  />
+  <div />
+</div>
+`;
