@@ -3,7 +3,6 @@
 exports[`should render StatusBar correctly 1`] = `
 <div
   className="status-bar status-bar__content"
-  key="edf9fb9d-0049-4d52-9de2-006fc6c75f2a"
 >
   <CSSTransitionGroup
     transitionAppear={true}
@@ -14,5 +13,148 @@ exports[`should render StatusBar correctly 1`] = `
     transitionLeaveTimeout={1000}
     transitionName="anim"
   />
+</div>
+`;
+
+exports[`should render StatusBar with default message correctly 1`] = `
+<div
+  className="status-bar status-bar__content"
+>
+  <CSSTransitionGroup
+    transitionAppear={true}
+    transitionAppearTimeout={1000}
+    transitionEnter={true}
+    transitionEnterTimeout={500}
+    transitionLeave={true}
+    transitionLeaveTimeout={1000}
+    transitionName="anim"
+  >
+    <p
+      className="status-bar__default-msg"
+      key="ec91e82d-7ff2-4223-9f64-c249af3a7964"
+    >
+      default message
+    </p>
+  </CSSTransitionGroup>
+</div>
+`;
+
+exports[`should render StatusBar with route fail status correctly 1`] = `
+<div
+  className="status-bar status-bar__content"
+>
+  <CSSTransitionGroup
+    transitionAppear={true}
+    transitionAppearTimeout={1000}
+    transitionEnter={true}
+    transitionEnterTimeout={500}
+    transitionLeave={true}
+    transitionLeaveTimeout={1000}
+    transitionName="anim"
+  >
+    <p
+      className="status-bar__text"
+      key="b4fc0e36-a042-4055-aa4f-04cca227fd66"
+    >
+      route fail
+      . Please choose another destination
+    </p>
+  </CSSTransitionGroup>
+</div>
+`;
+
+exports[`should render StatusBar with route in progress status correctly 1`] = `
+<div
+  className="status-bar status-bar__content"
+>
+  <CSSTransitionGroup
+    transitionAppear={true}
+    transitionAppearTimeout={1000}
+    transitionEnter={true}
+    transitionEnterTimeout={500}
+    transitionLeave={true}
+    transitionLeaveTimeout={1000}
+    transitionName="anim"
+  >
+    <p
+      className="status-bar__text"
+      key="b3ec9dce-48fa-4ce5-ad8c-43dd264dc0d3"
+    >
+      in progress
+    </p>
+  </CSSTransitionGroup>
+</div>
+`;
+
+exports[`should render StatusBar with server error correctly 1`] = `
+<div
+  className="status-bar status-bar__content"
+>
+  <CSSTransitionGroup
+    transitionAppear={true}
+    transitionAppearTimeout={1000}
+    transitionEnter={true}
+    transitionEnterTimeout={500}
+    transitionLeave={true}
+    transitionLeaveTimeout={1000}
+    transitionName="anim"
+  >
+    <p
+      className="status-bar__text"
+      key="1a3b021d-4f9b-4e50-9f59-73fbac213894"
+    >
+      There was a connection error, please try again
+    </p>
+  </CSSTransitionGroup>
+</div>
+`;
+
+exports[`should render StatusBar with total distance correctly 1`] = `
+<div
+  className="status-bar status-bar__content"
+>
+  <CSSTransitionGroup
+    transitionAppear={true}
+    transitionAppearTimeout={1000}
+    transitionEnter={true}
+    transitionEnterTimeout={500}
+    transitionLeave={true}
+    transitionLeaveTimeout={1000}
+    transitionName="anim"
+  >
+    <p
+      className="status-bar__text"
+      key="7558a00d-d5ea-4d93-a10f-fb1aa3772d7c"
+    >
+      Total distance 
+      10
+       km
+    </p>
+  </CSSTransitionGroup>
+</div>
+`;
+
+exports[`should render StatusBar with total time correctly 1`] = `
+<div
+  className="status-bar status-bar__content"
+>
+  <CSSTransitionGroup
+    transitionAppear={true}
+    transitionAppearTimeout={1000}
+    transitionEnter={true}
+    transitionEnterTimeout={500}
+    transitionLeave={true}
+    transitionLeaveTimeout={1000}
+    transitionName="anim"
+  >
+    <p
+      className="status-bar__text"
+      key="de413ad6-373c-4f8a-91d7-8d5d0f29c9ae"
+    >
+      Travel time 
+      150
+       min.
+    </p>
+  </CSSTransitionGroup>
 </div>
 `;
