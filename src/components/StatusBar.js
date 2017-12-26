@@ -10,7 +10,7 @@ const StatusBar = ({
   totalDistance,
   totalTime,
 }) => (
-  <div className="status-bar status-bar__content">
+  <div key={uuid()} className="status-bar status-bar__content">
     <ReactCSSTransitionGroup
       transitionName="anim"
       transitionEnterTimeout={500}
