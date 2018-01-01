@@ -1,4 +1,7 @@
-export default (state = {}, action) => {
+const INITIAL_STATE = { defaultMsg: 'WELCOME TO ROUTE APP' };
+
+
+export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case 'SET_ROUTE_SUCESS':
       return {
@@ -19,9 +22,6 @@ export default (state = {}, action) => {
         serverError: action.error.response.status,
       };
     default:
-      return {
-        state,
-        defaultMsg: 'WELCOME TO ROUTE APP',
-      };
+      return state;
   }
 };
