@@ -6,6 +6,7 @@ const INITIAL_STATE = {
   totalDistance: '',
   totalTime: '',
   serverError: '',
+  loading: false,
 };
 
 
@@ -14,46 +15,39 @@ export default (state = INITIAL_STATE, action) => {
     case 'SET_ROUTE_SUCESS':
       return {
         ...state,
+        ...INITIAL_STATE,
+        defaultMsg: '',
         path: action.res.data.path,
         totalDistance: action.res.data.total_distance,
         totalTime: action.res.data.total_time,
-        defaultMsg: '',
-        routeFailStatus: '',
-        routeInProgStatus: '',
-        serverError: '',
       };
     case 'SET_ROUTE_FAIL':
       return {
         ...state,
-        routeFailStatus: action.res.data.error,
+        ...INITIAL_STATE,
         defaultMsg: '',
-        path: '',
-        routeInProgStatus: '',
-        totalTime: '',
-        totalDistance: '',
-        serverError: '',
+        routeFailStatus: action.res.data.error,
       };
     case 'SET_ROUTE_IN_PROGRESS':
       return {
         ...state,
-        routeInProgStatus: action.res.data.status,
+        ...INITIAL_STATE,
         defaultMsg: '',
-        path: '',
-        routeFailStatus: '',
-        totalTime: '',
-        totalDistance: '',
-        serverError: '',
+        routeInProgStatus: action.res.data.status,
       };
     case 'SET_ERROR':
       return {
         ...state,
-        serverError: action.error.response.status,
+        ...INITIAL_STATE,
         defaultMsg: '',
-        path: '',
-        routeFailStatus: '',
-        routeInProgStatus: '',
-        totalTime: '',
-        totalDistance: '',
+        serverError: action.error.response.status,
+      };
+    case 'SET_ROUTE':
+      return {
+        ...state,
+        ...INITIAL_STATE,
+        defaultMsg: '',
+        loading: true,
       };
     default:
       return state;

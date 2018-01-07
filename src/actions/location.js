@@ -1,4 +1,7 @@
 import axios from 'axios';
+import axiosRetry from 'axios-retry';
+
+axiosRetry(axios, { retries: 5 });
 
 // ROOT_URL value is stored here for the development only
 const ROOT_URL = 'http://localhost:3000';
@@ -25,7 +28,12 @@ export const setError = error => ({
 
 export const startSetRoute = (locations) => {
   return (dispatch) => {
-    return axios.post(`${ROOT_URL}/route`, locations)
+    dispatch({ type: 'SET_ROUTE' });
+    return axios.post(`${ROOT_URL}/route`, {
+      'axios-retry': {
+        retries: 5,
+      },
+    }, locations)
       // POST request to submit locations to server
       .then((response) => {
         return response;
@@ -36,7 +44,7 @@ export const startSetRoute = (locations) => {
       .then(({ data }) => {
         const { token } = data;
         // GET request to fetch locations coordinates
-        axios.get(`${ROOT_URL}/route/${token}`)
+        axios.get(`${ROOT_URL}/route/${token}`, { 'axios-retry': { retries: 5 } })
           .then((res) => {
             if (res.data.status === 'success') {
               dispatch(setRouteSuccess(res));

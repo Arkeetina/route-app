@@ -5,21 +5,179 @@ exports[`should correctly render LocationForm 1`] = `
   className="form"
   onSubmit={[Function]}
 >
-  <input
-    className="text-input"
-    onChange={[Function]}
-    onFocus={[Function]}
-    placeholder="Enter start off location"
-    type="text"
-    value=""
+  <PlacesAutocomplete
+    autocompleteItem={[Function]}
+    classNames={Object {}}
+    clearItemsOnError={false}
+    debounce={200}
+    googleLogo={false}
+    googleLogoType="default"
+    highlightFirstSuggestion={false}
+    inputProps={
+      Object {
+        "onChange": [Function],
+        "onFocus": [Function],
+        "placeholder": "Enter start off location",
+        "type": "text",
+        "value": "",
+      }
+    }
+    onError={[Function]}
+    options={Object {}}
+    styles={
+      Object {
+        "autocompleteContainer": Object {
+          "backgroundColor": "white",
+          "border": "10px solid #555555",
+          "position": "absolute",
+          "top": "100%",
+          "width": "100%",
+          "zIndex": "1000",
+        },
+        "autocompleteItem": Object {
+          "backgroundColor": "#ffffff",
+          "color": "#555555",
+          "cursor": "pointer",
+          "padding": "10px",
+        },
+        "autocompleteItemActive": Object {
+          "backgroundColor": "#fafafa",
+        },
+        "googleLogoContainer": Object {
+          "backgroundColor": "#fafafa",
+          "padding": "1px",
+          "textAlign": "right",
+        },
+        "googleLogoImage": Object {
+          "width": 150,
+        },
+        "input": Object {
+          "display": "inline-block",
+          "padding": "10px",
+          "width": "100%",
+        },
+        "root": Object {
+          "paddingBottom": "0px",
+          "position": "relative",
+        },
+      }
+    }
   />
-  <input
-    className="text-input"
-    onChange={[Function]}
-    onFocus={[Function]}
-    placeholder="Enter drop off location"
-    type="text"
-    value=""
+  <PlacesAutocomplete
+    autocompleteItem={[Function]}
+    classNames={Object {}}
+    clearItemsOnError={false}
+    debounce={200}
+    googleLogo={false}
+    googleLogoType="default"
+    highlightFirstSuggestion={false}
+    inputProps={
+      Object {
+        "onChange": [Function],
+        "onFocus": [Function],
+        "placeholder": "Enter 1st drop off location",
+        "type": "text",
+        "value": "",
+      }
+    }
+    onError={[Function]}
+    options={Object {}}
+    styles={
+      Object {
+        "autocompleteContainer": Object {
+          "backgroundColor": "white",
+          "border": "10px solid #555555",
+          "position": "absolute",
+          "top": "100%",
+          "width": "100%",
+          "zIndex": "1000",
+        },
+        "autocompleteItem": Object {
+          "backgroundColor": "#ffffff",
+          "color": "#555555",
+          "cursor": "pointer",
+          "padding": "10px",
+        },
+        "autocompleteItemActive": Object {
+          "backgroundColor": "#fafafa",
+        },
+        "googleLogoContainer": Object {
+          "backgroundColor": "#fafafa",
+          "padding": "1px",
+          "textAlign": "right",
+        },
+        "googleLogoImage": Object {
+          "width": 150,
+        },
+        "input": Object {
+          "display": "inline-block",
+          "padding": "10px",
+          "width": "100%",
+        },
+        "root": Object {
+          "paddingBottom": "0px",
+          "position": "relative",
+        },
+      }
+    }
+  />
+  <PlacesAutocomplete
+    autocompleteItem={[Function]}
+    classNames={Object {}}
+    clearItemsOnError={false}
+    debounce={200}
+    googleLogo={false}
+    googleLogoType="default"
+    highlightFirstSuggestion={false}
+    inputProps={
+      Object {
+        "onChange": [Function],
+        "onFocus": [Function],
+        "placeholder": "Enter 2nd drop off location",
+        "type": "text",
+        "value": "",
+      }
+    }
+    onError={[Function]}
+    options={Object {}}
+    styles={
+      Object {
+        "autocompleteContainer": Object {
+          "backgroundColor": "white",
+          "border": "10px solid #555555",
+          "position": "absolute",
+          "top": "100%",
+          "width": "100%",
+          "zIndex": "1000",
+        },
+        "autocompleteItem": Object {
+          "backgroundColor": "#ffffff",
+          "color": "#555555",
+          "cursor": "pointer",
+          "padding": "10px",
+        },
+        "autocompleteItemActive": Object {
+          "backgroundColor": "#fafafa",
+        },
+        "googleLogoContainer": Object {
+          "backgroundColor": "#fafafa",
+          "padding": "1px",
+          "textAlign": "right",
+        },
+        "googleLogoImage": Object {
+          "width": 150,
+        },
+        "input": Object {
+          "display": "inline-block",
+          "padding": "10px",
+          "width": "100%",
+        },
+        "root": Object {
+          "paddingBottom": "0px",
+          "position": "relative",
+        },
+      }
+    }
   />
   <button
     className="button"
@@ -36,21 +194,179 @@ exports[`should render error for invalid form submission 1`] = `
   className="form"
   onSubmit={[Function]}
 >
-  <input
-    className="text-input"
-    onChange={[Function]}
-    onFocus={[Function]}
-    placeholder="Enter start off location"
-    type="text"
-    value=""
+  <PlacesAutocomplete
+    autocompleteItem={[Function]}
+    classNames={Object {}}
+    clearItemsOnError={false}
+    debounce={200}
+    googleLogo={false}
+    googleLogoType="default"
+    highlightFirstSuggestion={false}
+    inputProps={
+      Object {
+        "onChange": [Function],
+        "onFocus": [Function],
+        "placeholder": "Enter start off location",
+        "type": "text",
+        "value": "",
+      }
+    }
+    onError={[Function]}
+    options={Object {}}
+    styles={
+      Object {
+        "autocompleteContainer": Object {
+          "backgroundColor": "white",
+          "border": "10px solid #555555",
+          "position": "absolute",
+          "top": "100%",
+          "width": "100%",
+          "zIndex": "1000",
+        },
+        "autocompleteItem": Object {
+          "backgroundColor": "#ffffff",
+          "color": "#555555",
+          "cursor": "pointer",
+          "padding": "10px",
+        },
+        "autocompleteItemActive": Object {
+          "backgroundColor": "#fafafa",
+        },
+        "googleLogoContainer": Object {
+          "backgroundColor": "#fafafa",
+          "padding": "1px",
+          "textAlign": "right",
+        },
+        "googleLogoImage": Object {
+          "width": 150,
+        },
+        "input": Object {
+          "display": "inline-block",
+          "padding": "10px",
+          "width": "100%",
+        },
+        "root": Object {
+          "paddingBottom": "0px",
+          "position": "relative",
+        },
+      }
+    }
   />
-  <input
-    className="text-input"
-    onChange={[Function]}
-    onFocus={[Function]}
-    placeholder="Enter drop off location"
-    type="text"
-    value=""
+  <PlacesAutocomplete
+    autocompleteItem={[Function]}
+    classNames={Object {}}
+    clearItemsOnError={false}
+    debounce={200}
+    googleLogo={false}
+    googleLogoType="default"
+    highlightFirstSuggestion={false}
+    inputProps={
+      Object {
+        "onChange": [Function],
+        "onFocus": [Function],
+        "placeholder": "Enter 1st drop off location",
+        "type": "text",
+        "value": "",
+      }
+    }
+    onError={[Function]}
+    options={Object {}}
+    styles={
+      Object {
+        "autocompleteContainer": Object {
+          "backgroundColor": "white",
+          "border": "10px solid #555555",
+          "position": "absolute",
+          "top": "100%",
+          "width": "100%",
+          "zIndex": "1000",
+        },
+        "autocompleteItem": Object {
+          "backgroundColor": "#ffffff",
+          "color": "#555555",
+          "cursor": "pointer",
+          "padding": "10px",
+        },
+        "autocompleteItemActive": Object {
+          "backgroundColor": "#fafafa",
+        },
+        "googleLogoContainer": Object {
+          "backgroundColor": "#fafafa",
+          "padding": "1px",
+          "textAlign": "right",
+        },
+        "googleLogoImage": Object {
+          "width": 150,
+        },
+        "input": Object {
+          "display": "inline-block",
+          "padding": "10px",
+          "width": "100%",
+        },
+        "root": Object {
+          "paddingBottom": "0px",
+          "position": "relative",
+        },
+      }
+    }
+  />
+  <PlacesAutocomplete
+    autocompleteItem={[Function]}
+    classNames={Object {}}
+    clearItemsOnError={false}
+    debounce={200}
+    googleLogo={false}
+    googleLogoType="default"
+    highlightFirstSuggestion={false}
+    inputProps={
+      Object {
+        "onChange": [Function],
+        "onFocus": [Function],
+        "placeholder": "Enter 2nd drop off location",
+        "type": "text",
+        "value": "",
+      }
+    }
+    onError={[Function]}
+    options={Object {}}
+    styles={
+      Object {
+        "autocompleteContainer": Object {
+          "backgroundColor": "white",
+          "border": "10px solid #555555",
+          "position": "absolute",
+          "top": "100%",
+          "width": "100%",
+          "zIndex": "1000",
+        },
+        "autocompleteItem": Object {
+          "backgroundColor": "#ffffff",
+          "color": "#555555",
+          "cursor": "pointer",
+          "padding": "10px",
+        },
+        "autocompleteItemActive": Object {
+          "backgroundColor": "#fafafa",
+        },
+        "googleLogoContainer": Object {
+          "backgroundColor": "#fafafa",
+          "padding": "1px",
+          "textAlign": "right",
+        },
+        "googleLogoImage": Object {
+          "width": 150,
+        },
+        "input": Object {
+          "display": "inline-block",
+          "padding": "10px",
+          "width": "100%",
+        },
+        "root": Object {
+          "paddingBottom": "0px",
+          "position": "relative",
+        },
+      }
+    }
   />
   <button
     className="button"

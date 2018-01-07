@@ -16,18 +16,19 @@ export class RouteContainer extends Component {
     const {
       defaultMsg,
       path,
+      loading,
       routeInProgStatus,
       routeFailStatus,
       serverError,
       totalDistance,
       totalTime,
-      networkError,
     } = this.props;
 
     return (
       <div className="box-container">
         <StatusBar
           defaultMsg={defaultMsg}
+          loading={loading}
           routeFailStatus={routeFailStatus}
           routeInProgStatus={routeInProgStatus}
           serverError={serverError}
@@ -52,12 +53,18 @@ export class RouteContainer extends Component {
   }
 }
 const mapDispatchToProps = (dispatch, props) => ({
-  startSetRoute: (startOffLocation, dropOffLocation) => dispatch(startSetRoute(startOffLocation, dropOffLocation))
+  startSetRoute: (startOffLocation, dropOffLocation, secondDropOffLocation) =>
+    dispatch(startSetRoute(
+    startOffLocation, 
+    dropOffLocation,
+    secondDropOffLocation,
+  )),
 });
 
 const mapStateToProps = (state) => {
   return {
     defaultMsg: state.location.defaultMsg,
+    loading: state.location.loading,
     path: state.location.path,
     routeFailStatus: state.location.routeFailStatus,
     routeInProgStatus: state.location.routeInProgStatus,

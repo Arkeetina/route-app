@@ -1,48 +1,74 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import uuid from 'uuid';
 
-const StatusBar = ({
-  defaultMsg,
-  routeInProgStatus,
-  routeFailStatus,
-  serverError,
-  totalDistance,
-  totalTime,
-}) => (
-  <div key={uuid()} className="status-bar status-bar__content">
-    <ReactCSSTransitionGroup
-      transitionName="anim"
-      transitionEnterTimeout={500}
-      transitionAppear
-      transitionAppearTimeout={1000}
-      transitionLeaveTimeout={1000}
-    >
-      {defaultMsg &&
-        <p className="status-bar__default-msg" key={uuid()}>{defaultMsg}</p>}
+import StatusBarText from './StatusBarText';
 
-      {serverError &&
-        <p className="status-bar__text" key={uuid()}>
-          There was a connection error, please try again
-        </p>}
+class StatusBar extends Component {
+  loaderRender = () => {
+    const { loading } = this.props;
+    if (loading) {
+      return <img className="loader__image" src="/images/loader.gif"/>;
+    }
+  }
 
-      {routeInProgStatus &&
-        <p className="status-bar__text" key={uuid()}>{routeInProgStatus}</p>}
+  defaultMsgRender = () => {
+    const { defaultMsg } = this.props;
+    if (defaultMsg) {
+      return <StatusBarText message={defaultMsg}/>;
+    }
+  }
 
-      {routeFailStatus &&
-        <p className="status-bar__text" key={uuid()}>
-          {routeFailStatus}. Please choose another destination
-        </p>}
+  routeInProgStatusRender = () => {
+    const { routeInProgStatus } = this.props;
+    if (routeInProgStatus) {
+      return <StatusBarText message={routeInProgStatus}/>;
+    }
+  }
 
-      {totalTime &&
-        <p className="status-bar__text" key={uuid()}>Travel time {totalTime / 60} min.</p>}
+  routeFailStatusRender = () => {
+    const { routeFailStatus } = this.props;
+    if (routeFailStatus) {
+      return <StatusBarText message={routeFailStatus}/>;
+    }
+  }
 
-      {totalDistance &&
-        <p className="status-bar__text" key={uuid()}>Total distance {totalDistance / 1000} km</p>}
+  serverErrorRender = () => {
+    const { serverError } = this.props;
+    const message = "Connection Error, please try again later";
 
-    </ReactCSSTransitionGroup>
-  </div>
-);
+    if (serverError) {
+      return <StatusBarText message={message}/>;
+    }
+  }
 
+  pathRender = () => {
+    const { totalTime, totalDistance } = this.props;
+    if (totalDistance && totalTime) {
+      return <StatusBarText distance={totalDistance} time={totalTime}/>;
+    }
+  }
+  
+  render() {
+    return (
+      <div key={uuid()} className="status-bar status-bar__content">
+        <ReactCSSTransitionGroup
+          transitionName="anim"
+          transitionEnterTimeout={500}
+          transitionAppear
+          transitionAppearTimeout={1000}
+          transitionLeaveTimeout={1000}
+        >
+          {this.defaultMsgRender()}
+          {this.routeInProgStatusRender()}
+          {this.routeFailStatusRender()}
+          {this.serverErrorRender()}
+          {this.pathRender()}
+          {this.loaderRender()}
+        </ReactCSSTransitionGroup>
+      </div>
+    );
+  }
+}
 
 export default StatusBar;

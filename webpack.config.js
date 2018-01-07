@@ -3,7 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 
 process.env.NODE_ENV = process.env.NODE_END || 'development';
-  
+
 if (process.env.NODE_ENV === 'test') {
   require('dotenv').config({path:'.env.test'});
 } else if (process.env.NODE_ENV === 'development') {
@@ -18,13 +18,13 @@ module.exports = (env) => {
     entry: ['babel-polyfill', './src/app.js'],
     output: {
       path: path.join(__dirname, 'public', 'dist'),
-      filename: 'bundle.js'
+      filename: 'bundle.js',
     },
     module: {
       rules: [{
         loader: 'babel-loader',
         test: /\.js$/,
-        exclude: /node_modules/
+        exclude: /node_modules/,
       }, {
         test: /\.s?css$/,
         use: CSSExtract.extract({
@@ -32,35 +32,37 @@ module.exports = (env) => {
             {
               loader: 'css-loader',
               options: {
-                sourceMap: true
-              }
+                sourceMap: true,
+              },
             },
             {
               loader: 'sass-loader',
               options: {
-                sourceMap: true
-              }
-            }
-          ]
-        })
-      }]
+                sourceMap: true,
+              },
+            },
+          ],
+        }),
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
+          },
+        ],
+      },
+      ],
     },
     plugins: [
       CSSExtract,
-      new webpack.DefinePlugin({
-       'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
-       'process.env.FIREBASE_AUTH_DOMAIN': JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),
-       'process.env.FIREBASE_DATABASE_URL': JSON.stringify(process.env.FIREBASE_DATABASE_URL),
-       'process.env.PROJECT_ID': JSON.stringify(process.env.PROJECT_ID),
-       'process.env.STORAGE_BUCKET': JSON.stringify(process.env.STORAGE_BUCKET),
-       'process.env.MESSAGING_SENDER_ID': JSON.stringify(process.env.MESSAGING_SENDER_ID)
-      })
     ],
     devtool: isProduction ? 'source-map' : 'inline-source-map',
     devServer: {
       contentBase: path.join(__dirname, 'public'),
       historyApiFallback: true,
-      publicPath: '/dist/'
-    }
+      publicPath: '/dist/',
+    },
   };
 };
