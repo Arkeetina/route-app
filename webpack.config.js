@@ -2,12 +2,12 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 
-process.env.NODE_ENV = process.env.NODE_END || 'dev';
+process.env.NODE_ENV = process.env.NODE_END || 'development';
 
 if (process.env.NODE_ENV === 'test') {
   require('dotenv').config({path:'.env.test'});
-} else if (process.env.NODE_ENV === 'dev') {
-  require('dotenv').config({path:'.env.dev'})
+} else if (process.env.NODE_ENV === 'development') {
+  require('dotenv').config({path:'.env.development'})
 }
 
 module.exports = (env) => {
