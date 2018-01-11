@@ -5,7 +5,7 @@ import LocationForm from './LocationForm';
 import Map from './Map';
 import StatusBar from './StatusBar';
 
-const GOOGLE_URL = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDKpzSptr4Y7IikRh3vEaGtrFFB8IfQDg8";
+const GOOGLE_URL = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDKQZGL1MF5dI3YZvBrr1RqYjfYeZVKcNA";
 
 export class RouteContainer extends Component {
   onSubmit = (locations) => {

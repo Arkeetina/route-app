@@ -6,11 +6,11 @@ const StatusBarText = ({
   defaultMsg,
   message,
   distance,
-  time 
+  time
 }) => (
   <div>
     {message && <p className="status-bar__text" key={uuid()}>{message}</p>}
-    {time && <p className="status-bar__text" key={uuid()}>Travel time {time / 60} min.</p>}
+    {time && <p className="status-bar__text" key={uuid()}>Travel time {Math.round(time / 60)} min.</p>}
     {distance && <p className="status-bar__text" key={uuid()}>Total distance {distance / 1000} km</p>}
   </div>
 );

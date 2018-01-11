@@ -2,12 +2,12 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 
-process.env.NODE_ENV = process.env.NODE_END || 'development';
+process.env.NODE_ENV = process.env.NODE_END || 'dev';
 
 if (process.env.NODE_ENV === 'test') {
   require('dotenv').config({path:'.env.test'});
-} else if (process.env.NODE_ENV === 'development') {
-  require('dotenv').config({path:'.env.development'})
+} else if (process.env.NODE_ENV === 'dev') {
+  require('dotenv').config({path:'.env.dev'})
 }
 
 module.exports = (env) => {
@@ -57,6 +57,10 @@ module.exports = (env) => {
     },
     plugins: [
       CSSExtract,
+      new webpack.DefinePlugin({
+        'process.env.API_KEY': JSON.stringify(process.env.API_KEY),
+        'process.env.ROOT_URL': JSON.stringify(process.env.ROOT_URL),
+      }),
     ],
     devtool: isProduction ? 'source-map' : 'inline-source-map',
     devServer: {
