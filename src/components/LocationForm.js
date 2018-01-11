@@ -54,6 +54,7 @@ export default class LocationForm extends Component {
   }
 
   render() {
+    // PlacesAutocomplete inputProps objects
     const {
       startOffLocation,
       secondDropOffLocation,
