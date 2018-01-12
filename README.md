@@ -1,6 +1,10 @@
 # route-app
 
-React/Redux app for displaying a route on Google map 
+React/Redux app for displaying a route on Google map
+
+[DEMO*](https://route-app.herokuapp.com/)
+
+*Demo is run by the mock server and renders only preset set of coordinates
 
 ## Installing
 
